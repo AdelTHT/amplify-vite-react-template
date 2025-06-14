@@ -6,8 +6,8 @@ const schema = a.schema({
     .model({
       marque: a.string(),
       modele: a.string(),
-      annee: a.int(), // Remplace `number()` par `int()` si tu attends un entier
-      prix: a.float(), // Utilise `float()` pour les prix si nécessaire
+      annee: a.string(), // Remplacer number par string
+      prix: a.string(),  // Remplacer number par string
     })
     .authorization((allow) => [allow.publicApiKey()]), // Autorisation publique
 
