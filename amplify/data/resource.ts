@@ -6,8 +6,8 @@ const schema = a.schema({
     .model({
       marque: a.string(),
       modele: a.string(),
-      annee: a.number(),
-      prix: a.number(),
+      annee: a.number(), // Correctement défini
+      prix: a.number(),  // Correctement défini
     })
     .authorization((allow) => [allow.publicApiKey()]), // Autorisation publique
 
