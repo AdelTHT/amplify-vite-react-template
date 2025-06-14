@@ -1,20 +1,13 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
-// Définition du schéma pour les voitures et les réservations
+// Définition du schéma pour les voitures
 const schema = a.schema({
   Car: a
     .model({
       marque: a.string(),
       modele: a.string(),
-      annee: a.string(), // Remplacer number par string
-      prix: a.string(),  // Remplacer number par string
-    })
-    .authorization((allow) => [allow.publicApiKey()]), // Autorisation publique
-
-  Reservation: a
-    .model({
-      carId: a.string(), // L'ID de la voiture réservée
-      date: a.string(), // La date de réservation
+      annee: a.number(),
+      prix: a.number(),
     })
     .authorization((allow) => [allow.publicApiKey()]), // Autorisation publique
 });
