@@ -22,7 +22,7 @@ function App() {
       alert("Veuillez sélectionner une voiture et une date.");
       return;
     }
-    
+
     client.models.Reservation.create({ 
       carId: selectedCar, 
       date: reservationDate 
@@ -39,7 +39,7 @@ function App() {
       <div>
         <h2>Voitures Disponibles</h2>
         <ul>
-          {cars.map((car) => (
+          {cars.map((car: any) => (
             <li key={car.id}>
               {car.marque} {car.modele} ({car.annee}) - {car.prix}€/jour
               <button onClick={() => setSelectedCar(car.id)}>Réserver</button>
